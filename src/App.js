@@ -1,6 +1,6 @@
 import ExpenseList from "./components/ExpenseList";
 
-function App() {
+const App = () => {
 	const expenses = [
 		{
 			title: "Car Insurance",
@@ -23,6 +23,6 @@ function App() {
 			<ExpenseList items={expenses} />
 		</div>
 	);
-}
+};
 
 export default App;

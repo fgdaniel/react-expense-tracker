@@ -1,6 +1,6 @@
 import ExpenseItem from "./ExpenseItem";
 import "./ExpenseList.css";
-function ExpenseList(props) {
+const ExpenseList = (props) => {
 	return (
 		<div className="expense-list">
 			<ExpenseItem
@@ -20,5 +20,5 @@ function ExpenseList(props) {
 			/>
 		</div>
 	);
-}
+};
 export default ExpenseList;
