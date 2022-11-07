@@ -1,0 +1,7 @@
+.expense-date {
+	@apply text-xs text-white text-center space-y-0.5 border border-white rounded-xl py-2 px-4;
+}
+.expense-date__month,
+.expense-date__year {
+	@apply font-bold;
+}
