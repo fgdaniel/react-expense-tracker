@@ -1,8 +1,8 @@
 .expense-date {
-	@apply text-sm text-white font-bold flex flex-row items-center space-x-2;
+	@apply text-sm text-gray-200 font-bold flex flex-row items-center space-x-2;
 }
 .expense-date__sep {
-	@apply text-xs font-normal text-white/40;
+	@apply text-xs font-normal text-gray-500;
 }
 .expense-date> * {
 	@apply after:w-[1px] after:h-5 after:rotate-45 after:bg-white;

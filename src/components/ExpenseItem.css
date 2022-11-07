@@ -1,5 +1,5 @@
 .expense-item {
-	@apply text-white flex justify-between items-center p-3 rounded-xl bg-gray-800 gap-3;
+	@apply text-white flex justify-between items-center p-3 gap-3;
 }
 .expense-item__content {
 	@apply flex flex-col-reverse items-end justify-start flex-grow gap-4 md:flex-row md:items-center md:justify-start;
@@ -8,5 +8,5 @@
 	@apply text-white text-base font-bold md:text-lg flex-grow;
 }
 .expense-item__price {
-	@apply text-white text-sm leading-none font-bold p-2 md:py-3 md:px-3 rounded-xl bg-indigo-500 border border-indigo-800;
+	@apply text-rose-500 text-sm leading-none font-bold;
 }
