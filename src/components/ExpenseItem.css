@@ -1,5 +1,5 @@
 .expense-item {
-	@apply text-white flex justify-between items-center p-2 rounded-xl bg-black gap-4;
+	@apply text-white flex justify-between items-center p-2 rounded-xl bg-gray-800 gap-4;
 }
 .expense-item__content {
 	@apply flex flex-col-reverse items-end justify-start flex-grow gap-4 md:flex-row md:items-center md:justify-start;
