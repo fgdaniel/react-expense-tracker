@@ -1,0 +1,78 @@
+.tooltip {
+	@apply relative;
+}
+.tooltip__text {
+	@apply text-white text-sm leading-none py-2 px-3 bg-black/90 shadow-lg shadow-black/50 rounded-md absolute whitespace-nowrap  transform opacity-0 invisible transition-opacity;
+}
+.tooltip:hover > .tooltip__text {
+	@apply opacity-100 visible;
+}
+
+/* Align */
+.tooltip__align-top > .tooltip__text {
+	@apply bottom-full left-1/2 -translate-x-1/2
+}
+.tooltip__align-top-start > .tooltip__text {
+	@apply bottom-full left-0
+}
+.tooltip__align-top-end > .tooltip__text {
+	@apply bottom-full right-0
+}
+
+.tooltip__align-bottom > .tooltip__text {
+	@apply top-full left-1/2 -translate-x-1/2;
+}
+.tooltip__align-bottom-start > .tooltip__text {
+	@apply top-full left-0;
+}
+.tooltip__align-bottom-end > .tooltip__text {
+	@apply top-full right-0;
+}
+
+.tooltip__align-left > .tooltip__text {
+	@apply top-1/2 right-full -translate-y-1/2;
+}
+.tooltip__align-left-start > .tooltip__text {
+	@apply bottom-full right-full;
+}
+.tooltip__align-left-end > .tooltip__text {
+	@apply top-full right-full;
+}
+
+.tooltip__align-right > .tooltip__text {
+	@apply top-1/2 left-full -translate-y-1/2;
+}
+.tooltip__align-right-start > .tooltip__text {
+	@apply bottom-full left-full;
+}
+.tooltip__align-right-end > .tooltip__text {
+	@apply top-full left-full;
+}
+
+.tooltip__align-top > .tooltip__text,
+.tooltip__align-top-start > .tooltip__text,
+.tooltip__align-top-end > .tooltip__text,
+.tooltip__align-left-start > .tooltip__text,
+.tooltip__align-right-start > .tooltip__text  {
+	@apply mb-1;
+}
+
+.tooltip__align-bottom > .tooltip__text,
+.tooltip__align-bottom-start > .tooltip__text,
+.tooltip__align-bottom-end > .tooltip__text,
+.tooltip__align-left-end > .tooltip__text,
+.tooltip__align-right-end > .tooltip__text {
+	@apply mt-1
+}
+
+.tooltip__align-left > .tooltip__text,
+.tooltip__align-left-start > .tooltip__text,
+.tooltip__align-left-end > .tooltip__text {
+	@apply mr-1
+}
+
+.tooltip__align-right > .tooltip__text,
+.tooltip__align-right-start > .tooltip__text,
+.tooltip__align-right-end > .tooltip__text  {
+	@apply ml-1;
+}
