@@ -1,3 +1,4 @@
+import ExpenseCreate from "./components/Expenses/Create";
 import ExpenseList from "./components/Expenses/List";
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
 	];
 	return (
 		<div className="container">
+			<ExpenseCreate />
 			<ExpenseList items={expenses} />
 		</div>
 	);
