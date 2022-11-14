@@ -1,3 +1,5 @@
+import "./Fields.css";
+
 const TextInput = (props) => {
 	let classes = "form-input";
 	if (props.className !== undefined) {
