@@ -1,0 +1,12 @@
+.btn {
+	@apply py-2 px-4 leading-snug rounded-lg border border-transparent outline-none ring-0 ring-offset-0 focus:ring transition-all duration-150 ease-linear;
+}
+.btn-primary {
+	@apply text-white bg-indigo-700 border-indigo-700 hover:bg-indigo-800 focus:bg-indigo-800 focus:ring-indigo-700/70 focus:border-indigo-900;
+}
+.btn-success {
+	@apply text-white bg-green-700 border-green-700 hover:bg-green-800 focus:bg-green-800 focus:ring-green-700/70 focus:border-green-900;
+}
+.btn-danger {
+	@apply text-white bg-red-700 border-red-700 hover:bg-red-800 focus:bg-red-800 focus:ring-red-700/70 focus:border-red-900;
+}
