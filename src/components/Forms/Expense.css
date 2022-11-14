@@ -1,0 +1,9 @@
+.expense__form {
+	@apply space-y-4
+}
+.expense__form-inputs {
+	@apply flex flex-row items-center;
+}
+.expense__form-inputs > div {
+	@apply flex-grow;
+}
