@@ -1,8 +1,8 @@
 .expense__form {
-	@apply space-y-4
+	@apply p-4 bg-slate-900 rounded-xl shadow-md shadow-slate-900/25 space-y-4;
 }
 .expense__form-inputs {
-	@apply flex flex-row items-center;
+	@apply flex flex-row items-center gap-4;
 }
 .expense__form-inputs > div {
 	@apply flex-grow;
