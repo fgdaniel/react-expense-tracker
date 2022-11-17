@@ -20,7 +20,7 @@ const App = () => {
 		},
 	];
 	return (
-		<div className="container">
+		<div className="container space-y-6">
 			<ExpenseCreate />
 			<ExpenseList items={expenses} />
 		</div>
