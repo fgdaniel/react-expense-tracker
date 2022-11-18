@@ -1,28 +1,38 @@
 import Button from "../UI/Button";
 import "./Expense.css";
-import { TextInput, NumberInput, DateInput } from "../UI/Fields";
 
 const ExpenseForm = () => {
+	const titleChangeHandler = () => {
+		console.log("title changed");
+	};
 	return (
 		<form className="expense__form">
 			<div className="expense__form-inputs">
 				<div>
-					<TextInput name="title" placeholder="Title" />
+					<input
+						type="text"
+						name="title"
+						placeholder="Title"
+						onChange={titleChangeHandler}
+					/>
 				</div>
 				<div>
-					<NumberInput
+					<input
 						name="amount"
 						placeholder="Amount"
 						min="0.01"
 						step="0.01"
+						onChange={titleChangeHandler}
 					/>
 				</div>
 				<div>
-					<DateInput
+					<input
+						type="date"
 						name="date"
-						placeholder="Title"
+						placeholder="Date"
 						min="2019-01-01"
 						max="2022-13-31"
+						onChange={titleChangeHandler}
 					/>
 				</div>
 			</div>

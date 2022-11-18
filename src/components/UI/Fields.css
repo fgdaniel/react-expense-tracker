@@ -1,4 +1,0 @@
-.form-input, .form-textarea, .form-select, .form-multiselect {
-	@apply text-white w-full bg-slate-900 border-slate-700 rounded-lg placeholder:text-white;
-	@apply focus:border-slate-700 focus:ring-slate-700 focus:ring-2;
-}
