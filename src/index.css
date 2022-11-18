@@ -7,10 +7,19 @@
 	body {
 		@apply bg-slate-800 py-16;
 	}
-	
 
 	.container {
 		@apply max-w-xl px-4 mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-3xl 2xl:max-w-3xl;
+	}
+
+}
+
+@layer components {
+
+	/* Input fields */
+	.form-input, .form-textarea, .form-select, .form-multiselect {
+		@apply text-white w-full bg-slate-900 border-slate-700 rounded-lg placeholder:text-white;
+		@apply focus:border-slate-700 focus:ring-slate-700 focus:ring-2;
 	}
 
 }
