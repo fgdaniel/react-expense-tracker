@@ -2,7 +2,7 @@
 	@apply p-4 bg-slate-900 rounded-xl shadow-md shadow-slate-900/25 space-y-4;
 }
 .expense__form-inputs {
-	@apply flex flex-row items-center gap-4;
+	@apply grid grid-cols-1 md:grid-cols-4 gap-4;
 }
 .expense__form-inputs > div {
 	@apply flex-grow;

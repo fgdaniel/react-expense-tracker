@@ -13,6 +13,7 @@ const ExpenseForm = () => {
 						type="text"
 						name="title"
 						placeholder="Title"
+						className="form-input"
 						onChange={titleChangeHandler}
 					/>
 				</div>
@@ -22,6 +23,7 @@ const ExpenseForm = () => {
 						placeholder="Amount"
 						min="0.01"
 						step="0.01"
+						className="form-input"
 						onChange={titleChangeHandler}
 					/>
 				</div>
@@ -32,13 +34,20 @@ const ExpenseForm = () => {
 						placeholder="Date"
 						min="2019-01-01"
 						max="2022-13-31"
+						className="form-input"
 						onChange={titleChangeHandler}
 					/>
 				</div>
+				<div>
+					<Button
+						type="submit"
+						variant="primary"
+						className="w-full whitespace-nowrap"
+					>
+						Add expense
+					</Button>
+				</div>
 			</div>
-			<Button type="submit" variant="primary">
-				Add expense
-			</Button>
 		</form>
 	);
 };
