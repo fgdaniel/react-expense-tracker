@@ -2,10 +2,10 @@ import "./Button.css";
 const Button = (props) => {
 	const classes = ["btn"];
 	if (props.variant !== undefined) {
-		classes.push(["btn-" + props.variant]);
+		classes.push(...["btn-" + props.variant]);
 	}
 	if (props.className !== undefined) {
-		classes.push(props.className.split(" "));
+		classes.push(...props.className.split(" "));
 	}
 	if (props.type === "link")
 		return (
