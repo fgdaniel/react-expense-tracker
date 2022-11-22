@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "../UI/Button";
 import "./Expense.css";
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
 	// Method 1
 	const [getTitle, setTitle] = useState("");
 	const [getAmount, setAmount] = useState("");
@@ -76,7 +76,8 @@ const ExpenseForm = () => {
 			date: new Date(getDate),
 		};
 
-		console.log(expenseData);
+		// console.log(expenseData);
+		props.onSaveData(expenseData);
 
 		// Clear fields
 		setTitle("");
