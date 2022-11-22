@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "../UI/Button";
-import "./Expense.css";
+import "./Form.css";
 
 const ExpenseForm = (props) => {
 	// Method 1

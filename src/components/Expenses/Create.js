@@ -1,4 +1,4 @@
-import ExpenseForm from "../Forms/Expense";
+import ExpenseForm from "./Form";
 
 const ExpenseCreate = (props) => {
 	const saveDataHandler = (existingData) => {
