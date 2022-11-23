@@ -77,7 +77,7 @@ const ExpenseForm = (props) => {
 		};
 
 		// console.log(expenseData);
-		props.onSaveData(expenseData);
+		props.onSaveData(expenseData); // Calling prop as function
 
 		// Clear fields
 		setTitle("");

@@ -6,7 +6,7 @@ const ExpenseCreate = (props) => {
 			...existingData,
 			id: Math.random().toString(),
 		};
-		props.onAdd(data);
+		props.onAdd(data); // Calling prop as function
 	};
 	return (
 		<div>
