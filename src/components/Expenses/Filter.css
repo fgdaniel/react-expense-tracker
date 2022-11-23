@@ -1,0 +1,6 @@
+.expense-filter {
+	@apply flex flex-row items-center gap-4;
+}
+.expense-filter__label {
+	@apply font-bold whitespace-nowrap;
+}
