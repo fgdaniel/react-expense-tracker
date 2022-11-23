@@ -11,12 +11,12 @@ const App = () => {
 		{
 			title: "Health Insurance",
 			amount: 350,
-			date: new Date(2021, 5, 15),
+			date: new Date(2020, 5, 15),
 		},
 		{
 			title: "Taxes",
 			amount: 550,
-			date: new Date(2021, 8, 12),
+			date: new Date(2019, 8, 12),
 		},
 	];
 	const addExpenseHandler = (expense) => {
