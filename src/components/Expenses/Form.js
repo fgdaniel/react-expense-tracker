@@ -4,9 +4,9 @@ import "./Form.css";
 
 const ExpenseForm = (props) => {
 	// Method 1
-	const [getTitle, setTitle] = useState("");
-	const [getAmount, setAmount] = useState("");
-	const [getDate, setDate] = useState("");
+	const [getFormTitle, setFormTitle] = useState("");
+	const [getFormAmount, setFormAmount] = useState("");
+	const [getFormDate, setFormDate] = useState("");
 
 	// Method 2 and 3
 	// const [getInput, setInput] = useState({
@@ -19,7 +19,7 @@ const ExpenseForm = (props) => {
 	const titleChangeHandler = (event) => {
 		// Method 1
 		// Update states independently
-		setTitle(event.target.value);
+		setFormTitle(event.target.value);
 
 		// Method 2
 		// Get previous state and update with new state
@@ -36,7 +36,7 @@ const ExpenseForm = (props) => {
 	const amountChangeHandler = (event) => {
 		// Method 1
 		// Update states independently
-		setAmount(event.target.value);
+		setFormAmount(event.target.value);
 
 		// Method 2
 		// Get previous state and update with new state
@@ -53,7 +53,7 @@ const ExpenseForm = (props) => {
 	const dateChangeHandler = (event) => {
 		// Method 1
 		// Update states independently
-		setDate(event.target.value);
+		setFormDate(event.target.value);
 
 		// Method 2
 		// Get previous state and update with new state
@@ -71,18 +71,18 @@ const ExpenseForm = (props) => {
 		event.preventDefault();
 
 		const expenseData = {
-			title: getTitle,
-			amount: getAmount,
-			date: new Date(getDate),
+			title: getFormTitle,
+			amount: getFormAmount,
+			date: new Date(getFormDate),
 		};
 
-		// console.log(expenseData);
+		console.log(expenseData);
 		props.onSaveData(expenseData); // Calling prop as function
 
 		// Clear fields
-		setTitle("");
-		setAmount("");
-		setDate("");
+		setFormTitle("");
+		setFormAmount("");
+		setFormDate("");
 	};
 
 	return (
@@ -94,7 +94,7 @@ const ExpenseForm = (props) => {
 						name="title"
 						placeholder="Title"
 						className="form-input"
-						value={getTitle}
+						value={getFormTitle}
 						onChange={titleChangeHandler}
 					/>
 				</div>
@@ -105,7 +105,7 @@ const ExpenseForm = (props) => {
 						min="0.01"
 						step="0.01"
 						className="form-input"
-						value={getAmount}
+						value={getFormAmount}
 						onChange={amountChangeHandler}
 					/>
 				</div>
@@ -117,7 +117,7 @@ const ExpenseForm = (props) => {
 						min="2019-01-01"
 						max="2022-13-31"
 						className="form-input"
-						value={getDate}
+						value={getFormDate}
 						onChange={dateChangeHandler}
 					/>
 				</div>
