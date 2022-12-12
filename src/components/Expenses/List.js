@@ -4,12 +4,20 @@ import ExpenseFilter from "./Filter";
 import ExpenseItem from "./Item";
 import "./List.css";
 const ExpenseList = (props) => {
-	const [getFilterYear, setFilterYear] = useState("2020");
+	const [getFilterYear, setFilterYear] = useState("all");
+	const [getList, setList] = useState(props.items);
+
 	const expenseFilterHandler = (selected) => {
-		// console.log(selected);
 		setFilterYear(selected);
 		console.log(`Item ${selected} stored succesfully`);
 	};
+
+	const filteredExpenses = props.items.filter((item) => {
+		if (getFilterYear === "all") return item;
+		return item.date.getFullYear().toString() === getFilterYear;
+	});
+
+	// console.log(props.items);
 	return (
 		<div className="space-y-4">
 			<Card className="p-4 text-white">
@@ -19,21 +27,14 @@ const ExpenseList = (props) => {
 				/>
 			</Card>
 			<div className="expense-list">
-				<ExpenseItem
-					title={props.items[0].title}
-					amount={props.items[0].amount}
-					date={props.items[0].date}
-				/>
-				<ExpenseItem
-					title={props.items[1].title}
-					amount={props.items[1].amount}
-					date={props.items[1].date}
-				/>
-				<ExpenseItem
-					title={props.items[2].title}
-					amount={props.items[2].amount}
-					date={props.items[2].date}
-				/>
+				{filteredExpenses.map((item, index) => (
+					<ExpenseItem
+						key={index}
+						title={item.title}
+						amount={item.amount}
+						date={item.date}
+					/>
+				))}
 			</div>
 		</div>
 	);
