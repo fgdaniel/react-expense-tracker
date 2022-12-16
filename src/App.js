@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ExpenseCreate from "./components/Expenses/Create";
-import ExpenseList from "./components/Expenses/List";
+import Expenses from "./components/Expenses/Expenses";
 
 const dummy_expenses = [
 	{
@@ -32,7 +32,7 @@ const App = () => {
 	return (
 		<div className="container space-y-6">
 			<ExpenseCreate onAdd={addExpenseHandler} />
-			<ExpenseList items={getExpenses} />
+			<Expenses items={getExpenses} />
 		</div>
 	);
 };
