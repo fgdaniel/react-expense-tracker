@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Button from "../UI/Button";
-import Card from "../UI/Card";
 import "./Form.css";
 
 const ExpenseForm = (props) => {
