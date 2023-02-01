@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "../UI/Button";
+import Card from "../UI/Card";
 import "./Form.css";
 
 const ExpenseForm = (props) => {
@@ -7,6 +8,7 @@ const ExpenseForm = (props) => {
 	const [getFormTitle, setFormTitle] = useState("");
 	const [getFormAmount, setFormAmount] = useState("");
 	const [getFormDate, setFormDate] = useState("");
+	const [getForm, setForm] = useState(false);
 
 	// Method 2 and 3
 	// const [getInput, setInput] = useState({
@@ -85,8 +87,35 @@ const ExpenseForm = (props) => {
 		setFormDate("");
 	};
 
+	const formToggleHandler = () => {
+		setForm(!getForm);
+		console.log(getForm);
+	};
+
+	if (getForm == false) {
+		return (
+			<button className="btn btn-primary" onClick={formToggleHandler}>
+				Add expense
+			</button>
+		);
+	}
 	return (
 		<form className="expense__form" onSubmit={submitHandler}>
+			<div className="expense__form-buttons">
+				<div>
+					<button
+						className="btn btn-danger"
+						onClick={formToggleHandler}
+					>
+						Cancel
+					</button>
+				</div>
+				<div>
+					<Button type="submit" variant="success">
+						Add expense
+					</Button>
+				</div>
+			</div>
 			<div className="expense__form-inputs">
 				<div>
 					<input
@@ -120,15 +149,6 @@ const ExpenseForm = (props) => {
 						value={getFormDate}
 						onChange={dateChangeHandler}
 					/>
-				</div>
-				<div>
-					<Button
-						type="submit"
-						variant="primary"
-						className="w-full whitespace-nowrap"
-					>
-						Add expense
-					</Button>
 				</div>
 			</div>
 		</form>
