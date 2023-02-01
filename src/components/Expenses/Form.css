@@ -1,9 +1,13 @@
 .expense__form {
-	@apply p-4 bg-slate-900 rounded-xl shadow-md shadow-slate-900/25 space-y-4;
+	@apply space-y-4;
 }
 .expense__form-inputs {
-	@apply grid grid-cols-1 md:grid-cols-4 gap-4;
+	@apply p-4 bg-slate-900 rounded-xl shadow-md shadow-slate-900/25;
+	@apply grid grid-cols-1 md:grid-cols-3 gap-4;
 }
 .expense__form-inputs > div {
 	@apply flex-grow;
+}
+.expense__form-buttons {
+	@apply flex flex-row justify-between;
 }
