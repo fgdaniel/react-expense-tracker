@@ -7,7 +7,9 @@ const ExpenseFilter = (props) => {
 	const changeHandler = (event) => {
 		setValue(event.target.value);
 		props.onChangeData(event.target.value);
-		console.log(`setValue ${event.target.value} succesfully`);
+		console.log(
+			`ExpenseFilter: setValue(${event.target.value}) succesfully`
+		);
 	};
 	return (
 		<div className="expense-filter">
@@ -22,10 +24,13 @@ const ExpenseFilter = (props) => {
 				onChange={changeHandler}
 			>
 				<option value="all">All</option>
-				<option value="2022">2022</option>
-				<option value="2021">2021</option>
-				<option value="2020">2020</option>
-				<option value="2019">2019</option>
+				{props.range.map((item, index) => {
+					return (
+						<option value={item} key={index}>
+							{item}
+						</option>
+					);
+				})}
 			</select>
 		</div>
 	);
