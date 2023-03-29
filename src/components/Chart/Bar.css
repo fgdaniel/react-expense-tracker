@@ -1,0 +1,9 @@
+.chart-bar {
+	@apply space-y-1 flex flex-col items-center;
+}
+.chart-bar__inner {
+	@apply flex flex-col justify-end items-center h-40 bg-slate-800 w-4 p-1 rounded-md;
+}
+.chart-bar__fill {
+	@apply w-full bg-indigo-500 rounded-md transition-all duration-150 ease-linear;
+}
